@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <title> হাই! ফ্রিতে টাকা ইনকাম করার সবচেয়ে সহজ উপায়! আমি এই Earn App থেকে একদম ফ্রিতে ৳১২০০ পেয়েছি তুমিও পাবে – শুধু এই লিংকে ক্লিক করো বিশ্বাস না হলে ট্রাই করো – একদম ফ্রি! Earn App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #d4fc79, #96e6a1);
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #388e3c;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .container {
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+    .card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    h3 {
+      margin-top: 0;
+      color: #2e7d32;
+    }
+    input, select {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+    .button {
+      background: #43a047;
+      color: white;
+      text-align: center;
+      padding: 12px;
+      border-radius: 12px;
+      margin-top: 12px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .button:hover {
+      background: #2e7d32;
+    }
+    .hidden {
+      display: none;
+    }
+    .balance-box {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    .balance-item {
+      background: #e0f2f1;
+      padding: 10px;
+      border-radius: 10px;
+      width: 48%;
+      text-align: center;
+      font-weight: bold;
+    }
+    .share-message {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #388e3c;
+      text-align: center;
+    }
+    .center-buttons {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+    #verifyMessage {
+      margin-top: 15px;
+      color: #2e7d32;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<header>Earn App - রেফার করে আয় করুন</header>
+<div class="container">
+
+  <!-- Step 1: Invite Friends -->
+  <div class="card" id="inviteCard">
+    <h3>🎯 কাজ শুরু করার আগে</h3>
+    <p class="share-message">প্রথমে আপনার ১০ জন বন্ধুকে Messenger-এ রেফার লিংক পাঠান।</p>
+    <div class="button" onclick="shareOnMessenger()">📩 Messenger-এ পাঠান</div>
+  </div>
+
+  <!-- Confirmation Dialog -->
+  <div class="card hidden" id="confirmCard">
+    <h3>📢 আপনি কি ১০ জন বন্ধুকে শেয়ার করেছেন?</h3>
+    <div class="center-buttons">
+      <div class="button" onclick="enterSite()">✅ Yes</div>
+      <div class="button" onclick="shareOnMessenger()">❌ No</div>
+    </div>
+  </div>
+
+  <!-- Step 2: After shared -->
+  <div class="card hidden" id="mainContent">
+    <h3>💰 আপনার ব্যালেন্স</h3>
+    <div class="balance-box">
+      <div class="balance-item">Balance: ৳<span id="balance">1200</span></div>
+      <div class="balance-item">Referrals: 10</div>
+    </div>
+    <div class="button" onclick="showWithdraw()">💵 টাকা তুলুন</div>
+    <div class="button" onclick="shareOnMessenger()">📩 আবার বন্ধুদের পাঠান</div>
+  </div>
+
+  <!-- Withdraw Form -->
+  <div class="card hidden" id="withdrawForm">
+    <h3>🧾 টাকা উত্তোলন</h3>
+    <select id="method">
+      <option value="">পেমেন্ট মাধ্যম নির্বাচন করুন</option>
+      <option value="bkash">Bkash</option>
+      <option value="nagad">Nagad</option>
+      <option value="rocket">Rocket</option>
+    </select>
+    <input type="text" id="number" placeholder="অ্যাকাউন্ট নাম্বার">
+    <input type="number" id="amount" placeholder="পরিমাণ (৳)">
+    <div class="button" onclick="submitWithdraw()">✅ সাবমিট করুন</div>
+  </div>
+
+  <!-- Verification Message -->
+  <div class="card hidden" id="verifyCard">
+    <h3>🔐 অ্যাকাউন্ট ভেরিফাই করুন</h3>
+    <p>উত্তোলনের জন্য আপনার অ্যাকাউন্ট ভেরিফিকেশন প্রয়োজন। নিচে ক্লিক করুন:</p>
+    <a class="button" href="https://adsterra.com/verify-link" target="_blank">🔓 Verify Now</a>
+    <p style="margin-top: 15px;">নিচে স্ক্রিনশট জমা দিন:</p>
+    <input type="file" accept="image/*" id="screenshot">
+    <div class="button" onclick="submitVerification()">📤 Verify Submit</div>
+    <div id="verifyMessage"></div>
+  </div>
+
+</div>
+
+<script>
+  const ip = Math.floor(Math.random() * 100000);
+  const refLink = `https://spin-win-24.vercel.app?ref=code${ip}`;
+
+  function shareOnMessenger() {
+    const text = `বন্ধু, আমি ১২০০ টাকা ফ্রি বোনাস পেয়েছি 🤑
+তুমি ও পাবে এখান থেকে 👇
+${refLink}`;
+    const encodedText = encodeURIComponent(text);
+    const fbDeepLink = `fb-messenger://share?link=${encodeURIComponent(refLink)}&app_id=1234567890`;
+    const fallbackLink = `https://m.me/?link=${encodeURIComponent(refLink)}&quote=${encodedText}`;
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    const messengerLink = isMobile ? fbDeepLink : fallbackLink;
+    window.location.href = messengerLink;
+    setTimeout(() => {
+      document.getElementById("inviteCard").classList.add("hidden");
+      document.getElementById("confirmCard").classList.remove("hidden");
+    }, 1000);
+  }
+
+  function enterSite() {
+    document.getElementById("confirmCard").classList.add("hidden");
+    document.getElementById("mainContent").classList.remove("hidden");
+  }
+
+  function showWithdraw() {
+    document.getElementById("withdrawForm").classList.remove("hidden");
+  }
+
+  function submitWithdraw() {
+    const method = document.getElementById("method").value;
+    const number = document.getElementById("number").value;
+    const amount = document.getElementById("amount").value;
+    if (!method || !number || !amount) {
+      alert("⚠️ সব ঘর পূরণ করুন");
+      return;
+    }
+    document.getElementById("withdrawForm").classList.add("hidden");
+    document.getElementById("verifyCard").classList.remove("hidden");
+  }
+
+  function submitVerification() {
+    const fileInput = document.getElementById("screenshot");
+    if (!fileInput.files.length) {
+      alert("⚠️ স্ক্রিনশট দিন");
+      return;
+    }
+    document.getElementById("verifyMessage").innerText = "✅ ভেরিফাই সাবমিট হয়েছে?
+আপনি যদি সঠিক করে রেফার এবং ভেরিফাই করে থাকেন তাহলে আপনি 72 ঘন্টার মোধে পেমেন্ট পেয়ে জাবেন। যাদেরকে রেফার করেছেন তারা যদি লিংকে ক্লিক করে রেফার না করে তাহলে আপনি পেমেন্ট পাবন না। ধন্যবাদ 🌺";
+  }
+</script>
+</body>
+</html>
