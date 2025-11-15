@@ -3,132 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task Tycoon - Earn Money</title>
+    <title>Task Tycoon - Fixed Referral</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-        
-        body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            min-height: 100vh;
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 400px;
-            margin: 0 auto;
-        }
-        
-        .card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 15px;
-            margin-bottom: 20px;
-            backdrop-filter: blur(10px);
-        }
-        
-        .btn {
-            background: #4CAF50;
-            color: white;
-            border: none;
-            padding: 15px;
-            border-radius: 10px;
-            width: 100%;
-            font-size: 16px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-        
-        input {
-            width: 100%;
-            padding: 12px;
-            margin: 8px 0;
-            border-radius: 8px;
-            border: 1px solid #ddd;
-        }
-        
-        .notification {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: #4CAF50;
-            color: white;
-            padding: 15px;
-            border-radius: 8px;
-            display: none;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial; }
+        body { background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 20px; }
+        .container { max-width: 400px; margin: 0 auto; }
+        .card { background: rgba(255,255,255,0.1); padding: 20px; border-radius: 15px; margin-bottom: 20px; }
+        .btn { background: #4CAF50; color: white; border: none; padding: 15px; border-radius: 10px; width: 100%; margin-top: 10px; }
+        input { width: 100%; padding: 12px; margin: 8px 0; border-radius: 8px; border: 1px solid #ddd; }
+        .notification { position: fixed; top: 20px; right: 20px; background: #4CAF50; padding: 15px; border-radius: 8px; display: none; z-index: 1000; }
     </style>
 </head>
 <body>
     <div class="notification" id="notification"></div>
 
-    <!-- Login Section -->
     <div id="loginSection" class="container">
         <div class="card">
-            <h2>Login</h2>
-            <input type="tel" id="loginMobile" placeholder="Mobile Number" required>
-            <input type="password" id="loginPassword" placeholder="Password" required>
-            <button class="btn" onclick="login()">Login</button>
+            <h2>🔐 লগইন</h2>
+            <input type="tel" id="loginMobile" placeholder="মোবাইল নম্বর" required>
+            <input type="password" id="loginPassword" placeholder="পাসওয়ার্ড" required>
+            <button class="btn" onclick="login()">লগইন</button>
             <p style="text-align: center; margin-top: 15px;">
-                Don't have account? <a href="#" onclick="showRegister()" style="color: #4CAF50;">Register</a>
+                অ্যাকাউন্ট নেই? <a href="#" onclick="showRegister()" style="color: #4CAF50;">রেজিস্ট্রেশন</a>
             </p>
         </div>
     </div>
 
-    <!-- Register Section -->
     <div id="registerSection" class="container" style="display: none;">
         <div class="card">
-            <h2>Register</h2>
-            <input type="text" id="regName" placeholder="Full Name" required>
-            <input type="tel" id="regMobile" placeholder="Mobile Number" required>
-            <input type="password" id="regPassword" placeholder="Password" required>
-            <input type="text" id="regReferral" placeholder="Referral Code (Optional)">
-            <button class="btn" onclick="register()">Register</button>
+            <h2>📝 রেজিস্ট্রেশন</h2>
+            <input type="text" id="regName" placeholder="পুরো নাম" required>
+            <input type="tel" id="regMobile" placeholder="মোবাইল নম্বর" required>
+            <input type="password" id="regPassword" placeholder="পাসওয়ার্ড" required>
+            <input type="text" id="regReferral" placeholder="রেফার কোড (ঐচ্ছিক)">
+            <button class="btn" onclick="register()">অ্যাকাউন্ট খুলুন</button>
             <p style="text-align: center; margin-top: 15px;">
-                Already have account? <a href="#" onclick="showLogin()" style="color: #4CAF50;">Login</a>
+                Already have account? <a href="#" onclick="showLogin()" style="color: #4CAF50;">লগইন</a>
             </p>
         </div>
     </div>
 
-    <!-- Main App -->
     <div id="mainApp" style="display: none;">
         <div class="card">
-            <h2>Welcome, <span id="userName"></span></h2>
-            <p>Balance: $<span id="balance">0.00</span></p>
+            <h2>👋 Welcome, <span id="userName"></span></h2>
+            <p>💰 Balance: $<span id="balance">0.00</span></p>
+            <p>🆔 Your ID: <span id="userId"></span></p>
         </div>
 
         <div class="card">
-            <h3>Daily Tasks</h3>
-            <p>Completed: <span id="completedTasks">0</span>/100</p>
-            <button class="btn" onclick="doTask()">Do Task (+$0.01)</button>
+            <h3>📋 Daily Tasks</h3>
+            <p>✅ Completed: <span id="completedTasks">0</span>/10</p>
+            <button class="btn" onclick="doTask()">🎯 Do Task (+$0.10)</button>
         </div>
 
         <div class="card">
-            <h3>Referral System</h3>
-            <p>Your Referrals: <span id="referralCount">0</span></p>
-            <p>Your Referral Code: <strong id="userReferralCode"></strong></p>
-            <button class="btn" onclick="copyReferral()">Copy Referral Link</button>
+            <h3>👥 Referral System</h3>
+            <p>📊 Your Referrals: <span id="referralCount">0</span></p>
+            <p>🔗 Your Referral Code: <strong id="userReferralCode"></strong></p>
+            <button class="btn" onclick="copyReferral()">📋 Copy Referral Link</button>
         </div>
 
         <div class="card">
-            <h3>Referral History</h3>
+            <h3>📈 Referral History</h3>
             <div id="referralHistory"></div>
+        </div>
+
+        <button class="btn" onclick="logout()" style="background: #f44336;">🚪 Logout</button>
+        
+        <!-- 🔥 DEBUG SECTION -->
+        <div class="card" style="background: rgba(255,0,0,0.1);">
+            <h3>🐛 Debug Info</h3>
+            <div id="debugInfo"></div>
+            <button class="btn" onclick="showAllUsers()" style="background: #ff9800;">Show All Users</button>
         </div>
     </div>
 
     <script>
-        // Simple Storage System
-        function getUsers() {
-            return JSON.parse(localStorage.getItem('users')) || {};
+        // 🔥 FIXED: Single Database for All Users
+        const DB_KEY = 'taskTycoonDB';
+        
+        function getDatabase() {
+            const db = localStorage.getItem(DB_KEY);
+            if (!db) {
+                // Initialize empty database
+                const initialDB = {
+                    users: {},
+                    referrals: {}
+                };
+                localStorage.setItem(DB_KEY, JSON.stringify(initialDB));
+                return initialDB;
+            }
+            return JSON.parse(db);
         }
 
-        function saveUsers(users) {
-            localStorage.setItem('users', JSON.stringify(users));
+        function saveDatabase(db) {
+            localStorage.setItem(DB_KEY, JSON.stringify(db));
         }
 
         function getCurrentUser() {
@@ -139,24 +108,18 @@
             localStorage.setItem('currentUser', JSON.stringify(user));
         }
 
-        // Show Notification
         function showNotification(message, type = 'success') {
             const notification = document.getElementById('notification');
             notification.textContent = message;
             notification.style.display = 'block';
             notification.style.background = type === 'error' ? '#f44336' : '#4CAF50';
-            
-            setTimeout(() => {
-                notification.style.display = 'none';
-            }, 3000);
+            setTimeout(() => { notification.style.display = 'none'; }, 3000);
         }
 
-        // Generate Referral Code
         function generateReferralCode() {
-            return Math.random().toString(36).substring(2, 10).toUpperCase();
+            return Math.random().toString(36).substring(2, 8).toUpperCase();
         }
 
-        // Show/Hide Sections
         function showLogin() {
             document.getElementById('registerSection').style.display = 'none';
             document.getElementById('loginSection').style.display = 'block';
@@ -166,15 +129,15 @@
             document.getElementById('loginSection').style.display = 'none';
             document.getElementById('registerSection').style.display = 'block';
             
-            // Auto-fill referral code from URL
             const urlParams = new URLSearchParams(window.location.search);
             const refCode = urlParams.get('ref');
             if (refCode) {
                 document.getElementById('regReferral').value = refCode;
+                showNotification('🔗 Referral code detected!');
             }
         }
 
-        // ✅ FIXED: Register Function
+        // 🔥 FIXED REGISTER FUNCTION
         function register() {
             const name = document.getElementById('regName').value;
             const mobile = document.getElementById('regMobile').value;
@@ -182,14 +145,14 @@
             const referralCode = document.getElementById('regReferral').value;
 
             if (!name || !mobile || !password) {
-                showNotification('Please fill all fields', 'error');
+                showNotification('❌ সব তথ্য দিন', 'error');
                 return;
             }
 
-            const users = getUsers();
+            const db = getDatabase();
             
-            if (users[mobile]) {
-                showNotification('Mobile number already registered', 'error');
+            if (db.users[mobile]) {
+                showNotification('❌ এই মোবাইল নম্বর already registered', 'error');
                 return;
             }
 
@@ -199,118 +162,132 @@
                 name: name,
                 mobile: mobile,
                 password: password,
-                balance: 0.50, // Registration bonus
+                balance: 1.00,
                 tasksCompleted: 0,
                 referralCode: generateReferralCode(),
-                referrals: [],
-                referredBy: referralCode || null
+                totalEarned: 0,
+                joinDate: new Date().toLocaleString()
             };
 
-            users[mobile] = newUser;
-            saveUsers(users);
+            // Save to database
+            db.users[mobile] = newUser;
+            saveDatabase(db);
             setCurrentUser(newUser);
 
-            // ✅ FIXED: Process referral
+            showNotification('🎉 রেজিস্ট্রেশন সফল! $1.00 বোনাস পেলেন।');
+
+            // 🔥 PROCESS REFERRAL
             if (referralCode) {
-                processReferral(referralCode, newUser.id);
+                processReferral(referralCode, newUser);
             }
 
-            showNotification('Registration successful! $0.50 bonus added.');
             loadMainApp();
         }
 
-        // ✅ FIXED: Process Referral
-        function processReferral(referrerCode, newUserId) {
-            console.log('Processing referral:', referrerCode, 'for user:', newUserId);
+        // 🔥 FIXED REFERRAL PROCESSING
+        function processReferral(referrerCode, newUser) {
+            console.log('🔄 Processing referral for:', newUser.name);
             
-            const users = getUsers();
-            let referrerFound = null;
+            const db = getDatabase();
+            let referrer = null;
 
-            // Find user with this referral code
-            for (let mobile in users) {
-                if (users[mobile].referralCode === referrerCode) {
-                    referrerFound = users[mobile];
+            // Find referrer by code
+            for (let mobile in db.users) {
+                const user = db.users[mobile];
+                if (user.referralCode === referrerCode) {
+                    referrer = user;
                     break;
                 }
             }
 
-            if (referrerFound) {
-                console.log('Referrer found:', referrerFound.name);
+            if (referrer) {
+                console.log('✅ Referrer found:', referrer.name);
                 
-                // Add to referrer's referral list
-                referrerFound.referrals.push({
-                    id: newUserId,
+                // Create referral record
+                const referralId = Date.now();
+                db.referrals[referralId] = {
+                    id: referralId,
+                    referrerMobile: referrer.mobile,
+                    referredMobile: newUser.mobile,
+                    referredName: newUser.name,
                     earned: 0,
-                    status: 'pending'
-                });
+                    status: 'pending',
+                    date: new Date().toLocaleString()
+                };
 
-                // Update user data
-                users[referrerFound.mobile] = referrerFound;
-                saveUsers(users);
+                saveDatabase(db);
+                showNotification('👥 Referral added successfully!');
 
-                showNotification('Referral added successfully!');
-                
                 // Update display if referrer is current user
                 const currentUser = getCurrentUser();
-                if (currentUser && currentUser.mobile === referrerFound.mobile) {
+                if (currentUser && currentUser.mobile === referrer.mobile) {
                     loadMainApp();
                 }
             } else {
-                console.log('Referrer not found');
+                console.log('❌ Referrer not found');
+                showNotification('❌ Invalid referral code', 'error');
             }
         }
 
-        // Login Function
         function login() {
             const mobile = document.getElementById('loginMobile').value;
             const password = document.getElementById('loginPassword').value;
 
-            const users = getUsers();
-            const user = users[mobile];
+            const db = getDatabase();
+            const user = db.users[mobile];
 
             if (user && user.password === password) {
                 setCurrentUser(user);
-                showNotification('Login successful!');
+                showNotification('✅ লগইন সফল!');
                 loadMainApp();
             } else {
-                showNotification('Invalid mobile or password', 'error');
+                showNotification('❌ ভুল মোবাইল বা পাসওয়ার্ড', 'error');
             }
         }
 
-        // Load Main App
         function loadMainApp() {
             const user = getCurrentUser();
+            const db = getDatabase();
             
             document.getElementById('loginSection').style.display = 'none';
             document.getElementById('registerSection').style.display = 'none';
             document.getElementById('mainApp').style.display = 'block';
 
             document.getElementById('userName').textContent = user.name;
+            document.getElementById('userId').textContent = user.id;
             document.getElementById('balance').textContent = user.balance.toFixed(2);
             document.getElementById('completedTasks').textContent = user.tasksCompleted;
-            document.getElementById('referralCount').textContent = user.referrals.length;
             document.getElementById('userReferralCode').textContent = user.referralCode;
 
+            // Count user's referrals
+            const userReferrals = Object.values(db.referrals).filter(ref => ref.referrerMobile === user.mobile);
+            document.getElementById('referralCount').textContent = userReferrals.length;
+
             updateReferralHistory();
+            updateDebugInfo();
         }
 
-        // Update Referral History
         function updateReferralHistory() {
             const user = getCurrentUser();
+            const db = getDatabase();
             const historyDiv = document.getElementById('referralHistory');
             
-            if (user.referrals.length === 0) {
-                historyDiv.innerHTML = '<p>No referrals yet</p>';
+            const userReferrals = Object.values(db.referrals).filter(ref => ref.referrerMobile === user.mobile);
+            
+            if (userReferrals.length === 0) {
+                historyDiv.innerHTML = '<p>No referrals yet. Share your link!</p>';
                 return;
             }
 
             let html = '';
-            user.referrals.forEach(ref => {
+            userReferrals.forEach(ref => {
+                const progress = (ref.earned / 15) * 100;
                 html += `
                     <div style="border-bottom: 1px solid rgba(255,255,255,0.2); padding: 10px 0;">
-                        <p>User ID: ${ref.id}</p>
-                        <p>Earned: $${ref.earned.toFixed(2)}</p>
-                        <p>Status: ${ref.status}</p>
+                        <p><strong>${ref.referredName}</strong></p>
+                        <p>Earned: $${ref.earned.toFixed(2)} / $15.00</p>
+                        <p>Progress: ${progress.toFixed(1)}%</p>
+                        <p>Status: <span style="color: ${ref.status === 'active' ? '#4CAF50' : '#ff9800'}">${ref.status}</span></p>
                     </div>
                 `;
             });
@@ -318,85 +295,98 @@
             historyDiv.innerHTML = html;
         }
 
-        // Do Task
         function doTask() {
             const user = getCurrentUser();
+            const db = getDatabase();
             
-            if (user.tasksCompleted >= 100) {
-                showNotification('Daily tasks completed!', 'error');
+            if (user.tasksCompleted >= 10) {
+                showNotification('✅ Daily tasks completed!', 'error');
                 return;
             }
 
             user.tasksCompleted++;
-            user.balance += 0.01;
+            user.balance += 0.10;
+            user.totalEarned += 0.10;
 
-            // Update user data
-            const users = getUsers();
-            users[user.mobile] = user;
-            saveUsers(users);
+            // Update user in database
+            db.users[user.mobile] = user;
+            saveDatabase(db);
             setCurrentUser(user);
 
-            // ✅ FIXED: Update referral progress
-            updateReferralProgress(user.id, 0.01);
+            // 🔥 UPDATE REFERRAL PROGRESS
+            updateReferralProgress(user.mobile, 0.10);
 
-            showNotification('Task completed! +$0.01');
+            showNotification('✅ Task completed! +$0.10');
             loadMainApp();
         }
 
-        // ✅ FIXED: Update Referral Progress
-        function updateReferralProgress(userId, amount) {
-            console.log('Updating referral progress for:', userId, 'Amount:', amount);
-            
-            const users = getUsers();
+        function updateReferralProgress(userMobile, amount) {
+            const db = getDatabase();
             let updated = false;
 
-            for (let mobile in users) {
-                const user = users[mobile];
-                
-                // Check if this user has the referred user
-                const referralIndex = user.referrals.findIndex(ref => ref.id === userId);
-                
-                if (referralIndex !== -1) {
-                    console.log('Found referral in:', user.name);
+            // Find referrals for this user
+            for (let refId in db.referrals) {
+                const ref = db.referrals[refId];
+                if (ref.referredMobile === userMobile) {
+                    ref.earned += amount;
                     
-                    // Update referral progress
-                    user.referrals[referralIndex].earned += amount;
-                    
-                    // Check if reached $15 for bonus
-                    if (user.referrals[referralIndex].earned >= 15 && user.referrals[referralIndex].status === 'pending') {
-                        user.referrals[referralIndex].status = 'active';
-                        user.balance += 1.00; // $1 bonus
-                        showNotification('🎉 Referral bonus! +$1.00');
+                    if (ref.earned >= 15 && ref.status === 'pending') {
+                        ref.status = 'active';
+                        // Add bonus to referrer
+                        const referrer = db.users[ref.referrerMobile];
+                        if (referrer) {
+                            referrer.balance += 1.00;
+                            db.users[ref.referrerMobile] = referrer;
+                            showNotification('🎉 Referral bonus! +$1.00');
+                        }
                     }
                     
-                    users[mobile] = user;
+                    db.referrals[refId] = ref;
                     updated = true;
                 }
             }
 
             if (updated) {
-                saveUsers(users);
-                
-                // Update current user if affected
-                const currentUser = getCurrentUser();
-                if (users[currentUser.mobile]) {
-                    setCurrentUser(users[currentUser.mobile]);
-                    loadMainApp();
-                }
+                saveDatabase(db);
+                loadMainApp();
             }
         }
 
-        // Copy Referral Link
         function copyReferral() {
             const user = getCurrentUser();
             const referralLink = `${window.location.origin}${window.location.pathname}?ref=${user.referralCode}`;
-            
             navigator.clipboard.writeText(referralLink).then(() => {
-                showNotification('Referral link copied!');
+                showNotification('🔗 Referral link copied!');
             });
         }
 
-        // Check if user is already logged in
+        function logout() {
+            localStorage.removeItem('currentUser');
+            showNotification('👋 Logged out');
+            showLogin();
+        }
+
+        // 🔥 DEBUG FUNCTIONS
+        function showAllUsers() {
+            const db = getDatabase();
+            console.log('📊 ALL USERS:', db.users);
+            console.log('📈 ALL REFERRALS:', db.referrals);
+            
+            let debugHTML = '';
+            debugHTML += `<p><strong>Total Users:</strong> ${Object.keys(db.users).length}</p>`;
+            debugHTML += `<p><strong>Total Referrals:</strong> ${Object.keys(db.referrals).length}</p>`;
+            
+            document.getElementById('debugInfo').innerHTML = debugHTML;
+        }
+
+        function updateDebugInfo() {
+            const db = getDatabase();
+            document.getElementById('debugInfo').innerHTML = `
+                <p>Users: ${Object.keys(db.users).length} | Referrals: ${Object.keys(db.referrals).length}</p>
+            `;
+        }
+
+        // Initialize
         window.onload = function() {
             const currentUser = getCurrentUser();
             if (currentUser) {
@@ -404,7 +394,6 @@
             } else {
                 showLogin();
                 
-                // Check for referral code in URL
                 const urlParams = new URLSearchParams(window.location.search);
                 const refCode = urlParams.get('ref');
                 if (refCode) {
