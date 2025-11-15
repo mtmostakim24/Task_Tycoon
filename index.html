@@ -18,7 +18,6 @@
       background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
       color: #fff;
       min-height: 100vh;
-      padding-bottom: 70px;
     }
 
     .notification {
@@ -54,6 +53,201 @@
       font-size: 20px;
     }
 
+    /* Login Form Styles */
+    .login-container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .login-card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 25px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    }
+
+    .login-header {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .login-header i {
+      font-size: 40px;
+      color: #fdbb2d;
+      margin-bottom: 15px;
+    }
+
+    .login-header h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .login-header p {
+      opacity: 0.8;
+      font-size: 14px;
+    }
+
+    .form-control {
+      margin-bottom: 15px;
+    }
+
+    .form-control label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    .form-control input {
+      width: 100%;
+      padding: 12px 15px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(0, 0, 0, 0.2);
+      color: white;
+    }
+
+    .form-control input:focus {
+      outline: none;
+      border-color: #fdbb2d;
+    }
+
+    .btn {
+      background: linear-gradient(135deg, #4CAF50, #2E7D32);
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      display: block;
+      width: 100%;
+      text-align: center;
+      transition: all 0.3s ease;
+      margin-top: 15px;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .btn-secondary {
+      background: linear-gradient(135deg, #2196F3, #0D47A1);
+    }
+
+    .btn-telegram {
+      background: linear-gradient(135deg, #0088cc, #005580);
+    }
+
+    .register-link {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    .register-link a {
+      color: #fdbb2d;
+      text-decoration: none;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      text-align: center;
+      padding: 30px 20px;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 15px;
+      margin-bottom: 25px;
+    }
+
+    .hero-section h1 {
+      font-size: 28px;
+      margin-bottom: 15px;
+      color: #fdbb2d;
+    }
+
+    .hero-section p {
+      font-size: 16px;
+      opacity: 0.9;
+      margin-bottom: 20px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .feature-item {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .feature-item i {
+      font-size: 24px;
+      color: #4CAF50;
+      margin-bottom: 10px;
+    }
+
+    .feature-item p {
+      font-size: 12px;
+      opacity: 0.9;
+    }
+
+    /* Video Section */
+    .video-section {
+      margin-top: 25px;
+      text-align: center;
+    }
+
+    .video-section h3 {
+      margin-bottom: 15px;
+      font-size: 18px;
+      color: #fdbb2d;
+    }
+
+    .video-placeholder {
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+      padding: 40px 20px;
+      margin-bottom: 15px;
+    }
+
+    .video-placeholder i {
+      font-size: 50px;
+      color: #fdbb2d;
+      margin-bottom: 15px;
+    }
+
+    .video-placeholder p {
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+    /* Telegram Proof Section */
+    .telegram-proof {
+      text-align: center;
+      margin-top: 25px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .telegram-proof h3 {
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+
+    .telegram-proof p {
+      font-size: 14px;
+      opacity: 0.8;
+      margin-bottom: 15px;
+    }
+
+    /* Main App Styles */
     header {
       display: flex;
       justify-content: space-between;
@@ -255,53 +449,6 @@
       background: #4CAF50;
     }
 
-    .btn {
-      background: linear-gradient(135deg, #4CAF50, #2E7D32);
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      border-radius: 8px;
-      font-weight: bold;
-      cursor: pointer;
-      display: block;
-      width: 100%;
-      text-align: center;
-      transition: all 0.3s ease;
-      margin-top: 15px;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    }
-
-    .btn-secondary {
-      background: linear-gradient(135deg, #2196F3, #0D47A1);
-    }
-
-    .btn-telegram {
-      background: linear-gradient(135deg, #0088cc, #005580);
-    }
-
-    .form-group {
-      margin-bottom: 15px;
-    }
-
-    .form-group label {
-      display: block;
-      margin-bottom: 8px;
-      font-size: 14px;
-    }
-
-    .form-group select, .form-group input {
-      width: 100%;
-      padding: 12px 15px;
-      border-radius: 8px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      background: rgba(0, 0, 0, 0.2);
-      color: white;
-    }
-
     .referral-section {
       text-align: center;
       margin-top: 20px;
@@ -414,17 +561,6 @@
       font-weight: bold;
     }
 
-    .loading {
-      text-align: center;
-      padding: 20px;
-      font-size: 16px;
-    }
-
-    .loading i {
-      margin-right: 10px;
-    }
-
-    /* Referral History Styles */
     .referral-history {
       margin-top: 20px;
     }
@@ -514,170 +650,14 @@
       opacity: 0.7;
     }
 
-    /* Login Form Styles */
-    .login-container {
-      max-width: 500px;
-      margin: 0 auto;
+    .loading {
+      text-align: center;
       padding: 20px;
-    }
-
-    .login-card {
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 15px;
-      padding: 25px;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    }
-
-    .login-header {
-      text-align: center;
-      margin-bottom: 25px;
-    }
-
-    .login-header i {
-      font-size: 40px;
-      color: #fdbb2d;
-      margin-bottom: 15px;
-    }
-
-    .login-header h2 {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-
-    .login-header p {
-      opacity: 0.8;
-      font-size: 14px;
-    }
-
-    .form-control {
-      margin-bottom: 15px;
-    }
-
-    .form-control label {
-      display: block;
-      margin-bottom: 8px;
-      font-size: 14px;
-    }
-
-    .form-control input {
-      width: 100%;
-      padding: 12px 15px;
-      border-radius: 8px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      background: rgba(0, 0, 0, 0.2);
-      color: white;
-    }
-
-    .form-control input:focus {
-      outline: none;
-      border-color: #fdbb2d;
-    }
-
-    .register-link {
-      text-align: center;
-      margin-top: 20px;
-      font-size: 14px;
-    }
-
-    .register-link a {
-      color: #fdbb2d;
-      text-decoration: none;
-    }
-
-    /* Hero Section */
-    .hero-section {
-      text-align: center;
-      padding: 30px 20px;
-      background: rgba(0, 0, 0, 0.3);
-      border-radius: 15px;
-      margin-bottom: 25px;
-    }
-
-    .hero-section h1 {
-      font-size: 28px;
-      margin-bottom: 15px;
-      color: #fdbb2d;
-    }
-
-    .hero-section p {
       font-size: 16px;
-      opacity: 0.9;
-      margin-bottom: 20px;
     }
 
-    .features {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
-      margin: 20px 0;
-    }
-
-    .feature-item {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 15px;
-      border-radius: 10px;
-      text-align: center;
-    }
-
-    .feature-item i {
-      font-size: 24px;
-      color: #4CAF50;
-      margin-bottom: 10px;
-    }
-
-    .feature-item p {
-      font-size: 12px;
-      opacity: 0.9;
-    }
-
-    /* Video Section */
-    .video-section {
-      margin-top: 25px;
-      text-align: center;
-    }
-
-    .video-section h3 {
-      margin-bottom: 15px;
-      font-size: 18px;
-      color: #fdbb2d;
-    }
-
-    .video-placeholder {
-      background: rgba(0, 0, 0, 0.3);
-      border-radius: 10px;
-      padding: 40px 20px;
-      margin-bottom: 15px;
-    }
-
-    .video-placeholder i {
-      font-size: 50px;
-      color: #fdbb2d;
-      margin-bottom: 15px;
-    }
-
-    .video-placeholder p {
-      font-size: 14px;
-      opacity: 0.8;
-    }
-
-    /* Telegram Proof Section */
-    .telegram-proof {
-      text-align: center;
-      margin-top: 25px;
-      padding-top: 20px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .telegram-proof h3 {
-      margin-bottom: 15px;
-      font-size: 18px;
-    }
-
-    .telegram-proof p {
-      font-size: 14px;
-      opacity: 0.8;
-      margin-bottom: 15px;
+    .loading i {
+      margin-right: 10px;
     }
   </style>
 </head>
@@ -808,7 +788,7 @@
     </div>
   </div>
 
-  <!-- Main App Content (Initially Hidden) -->
+  <!-- Main App Content -->
   <div id="main-app" style="display:none;">
     <header>
       <div class="title">
@@ -884,9 +864,7 @@
             <span>Progress</span>
             <span id="progress-percent">0%</span>
           </div>
-          <div class="task-visual" id="task-visual">
-            <!-- Task dots will be generated here -->
-          </div>
+          <div class="task-visual" id="task-visual"></div>
           <button class="btn" onclick="startTask()">
             <i class="fas fa-play"></i> Start Task
           </button>
@@ -1047,36 +1025,26 @@
             <div>%</div>
             <div>Status</div>
           </div>
-          <div id="referral-history-list">
-            <!-- Referral history items will be generated here -->
-          </div>
+          <div id="referral-history-list"></div>
         </div>
       </div>
     </div>
 
     <div class="nav">
-      <div class="nav-item active" id="nav-home" onclick="show('home')">
-        <div class="nav-icon">
-          <i class="fas fa-home"></i>
-        </div>
+      <div class="nav-item active" id="nav-home" onclick="showSection('home')">
+        <div class="nav-icon"><i class="fas fa-home"></i></div>
         <div class="nav-label">Home</div>
       </div>
-      <div class="nav-item" id="nav-earn" onclick="show('earn')">
-        <div class="nav-icon">
-          <i class="fas fa-coins"></i>
-        </div>
+      <div class="nav-item" id="nav-earn" onclick="showSection('earn')">
+        <div class="nav-icon"><i class="fas fa-coins"></i></div>
         <div class="nav-label">Earn</div>
       </div>
-      <div class="nav-item" id="nav-withdraw" onclick="show('withdraw')">
-        <div class="nav-icon">
-          <i class="fas fa-wallet"></i>
-        </div>
+      <div class="nav-item" id="nav-withdraw" onclick="showSection('withdraw')">
+        <div class="nav-icon"><i class="fas fa-wallet"></i></div>
         <div class="nav-label">Withdraw</div>
       </div>
-      <div class="nav-item" id="nav-profile" onclick="show('profile')">
-        <div class="nav-icon">
-          <i class="fas fa-user"></i>
-        </div>
+      <div class="nav-item" id="nav-profile" onclick="showSection('profile')">
+        <div class="nav-icon"><i class="fas fa-user"></i></div>
         <div class="nav-label">Profile</div>
       </div>
     </div>
@@ -1084,76 +1052,81 @@
 
   <script>
     // Global variables
-    let userData = null;
-    let data = null;
     let currentUser = null;
+    let userData = null;
+    let dailyData = null;
 
-    // Generate referral codes
+    // Generate referral code
     function generateReferralCode() {
       const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
       let result = '';
-      // First 2 characters are numbers
-      for (let i = 0; i < 2; i++) {
-        result += Math.floor(Math.random() * 10);
-      }
-      // Next 6 characters are mixed
-      for (let i = 0; i < 6; i++) {
-        result += chars.charAt(Math.floor(Math.random() * chars.length));
-      }
+      for (let i = 0; i < 2; i++) result += Math.floor(Math.random() * 10);
+      for (let i = 0; i < 6; i++) result += chars.charAt(Math.floor(Math.random() * chars.length));
       return result;
     }
 
-    // Check if mobile number already exists
+    // Check if mobile exists
     function isMobileRegistered(mobile) {
       const users = JSON.parse(localStorage.getItem('registeredUsers') || '{}');
       return users.hasOwnProperty(mobile);
     }
 
-    // Get user IP address (simulated)
+    // Get user IP (simulated)
     function getUserIP() {
       return "192.168." + Math.floor(Math.random() * 255) + "." + Math.floor(Math.random() * 255);
     }
 
-    // Check if IP address already has an account
+    // Check if IP has account
     function isIPRegistered(ip) {
       const ipUsers = JSON.parse(localStorage.getItem('ipUsers') || '{}');
       return ipUsers.hasOwnProperty(ip);
     }
 
+    // Show notification
+    function showNotification(message, type = "success") {
+      const notification = document.getElementById("notification");
+      const messageElement = document.getElementById("notification-message");
+      
+      messageElement.textContent = message;
+      notification.className = "notification " + type;
+      notification.classList.add("show");
+      
+      setTimeout(() => notification.classList.remove("show"), 3000);
+    }
+
     // Register new user
-    function registerUser(userData) {
+    function registerUser(user) {
       const users = JSON.parse(localStorage.getItem('registeredUsers') || '{}');
-      users[userData.mobile] = userData;
+      users[user.mobile] = user;
       localStorage.setItem('registeredUsers', JSON.stringify(users));
       
-      // Store IP address to prevent multiple accounts
+      // Store IP
       const ipUsers = JSON.parse(localStorage.getItem('ipUsers') || '{}');
-      ipUsers[userData.ip] = userData.mobile;
+      ipUsers[user.ip] = user.mobile;
       localStorage.setItem('ipUsers', JSON.stringify(ipUsers));
       
       // Set current user
-      localStorage.setItem('currentUser', JSON.stringify(userData));
-      currentUser = userData;
+      localStorage.setItem('currentUser', JSON.stringify(user));
+      currentUser = user;
       
       // Initialize user data
-      initializeUserData(userData);
+      initializeUserData(user);
     }
 
-    // Initialize user data after registration
+    // ✅ FIXED: Initialize user data
     function initializeUserData(user) {
-      const userId = user.id;
       const today = new Date().toLocaleDateString();
       
-      // Initialize new user data
+      // User main data
       userData = {
-        userId, 
+        userId: user.id,
         username: user.name,
         firstName: user.name,
         mobile: user.mobile,
         referrals: 0,
         referralEarnings: 0,
         pendingReferrals: 0,
-        lifetimeEarning: 0.50, // Registration bonus $0.50
+        lifetimeEarning: 0.50, // $0.50 registration bonus
         withdrew: 0,
         totalTasks: 0,
         joinDate: today,
@@ -1162,21 +1135,22 @@
         referralCode: user.referralCode
       };
       
-      data = {
-        date: today, 
-        completed: 0, 
-        remaining: 100, 
+      // Daily data
+      dailyData = {
+        date: today,
+        completed: 0,
+        remaining: 100,
         todaysEarning: 0
       };
       
       // Save to localStorage
-      localStorage.setItem(`MTEarningData_${userId}`, JSON.stringify(userData));
-      localStorage.setItem(`dailyEarningData_${userId}`, JSON.stringify(data));
+      localStorage.setItem(`userData_${user.id}`, JSON.stringify(userData));
+      localStorage.setItem(`dailyData_${user.id}`, JSON.stringify(dailyData));
       
-      // Show welcome message and bonus notification
-      showNotification("🎉 Welcome to Task Tycoon Vercel App! You received $0.50 registration bonus.", "success");
+      // Show welcome
+      showNotification("🎉 Welcome! You received $0.50 registration bonus.", "success");
       
-      // Hide registration and show main app
+      // Show main app
       document.getElementById('registration-section').style.display = 'none';
       document.getElementById('main-app').style.display = 'block';
       document.getElementById('loading').style.display = 'none';
@@ -1186,15 +1160,15 @@
       // Update display
       updateDisplay();
       
-      // Check for referral and update referrer's data
+      // ✅ FIXED: Process referral
       if (user.referredBy) {
-        updateReferrerData(user.referredBy, userId);
+        processReferral(user.referredBy, user.id);
       }
     }
 
-    // ✅ FIXED: Update referrer's data - COMPLETELY REWRITTEN
-    function updateReferrerData(referrerCode, referredUserId) {
-      console.log("🔄 Updating referrer data for code:", referrerCode, "Referred user:", referredUserId);
+    // ✅ FIXED: Process referral - COMPLETELY REWRITTEN
+    function processReferral(referrerCode, referredUserId) {
+      console.log("🔄 Processing referral:", referrerCode, "->", referredUserId);
       
       // Find referrer by code
       const users = JSON.parse(localStorage.getItem('registeredUsers') || '{}');
@@ -1211,54 +1185,49 @@
         console.log("✅ Found referrer:", referrer.name);
         
         // Get referrer's data
-        const referrerDataKey = `MTEarningData_${referrer.id}`;
+        const referrerDataKey = `userData_${referrer.id}`;
         const storedReferrerData = localStorage.getItem(referrerDataKey);
         
         if (storedReferrerData) {
           const referrerData = JSON.parse(storedReferrerData);
           
-          // Initialize referralHistory if it doesn't exist
+          // Initialize referral history if needed
           if (!referrerData.referralHistory) {
             referrerData.referralHistory = [];
           }
           
-          // Check if referral already exists to avoid duplicates
+          // Check if referral already exists
           const existingReferral = referrerData.referralHistory.find(ref => ref.id === referredUserId);
           if (!existingReferral) {
             // Add new referral
-            const newReferral = {
+            referrerData.referralHistory.push({
               id: referredUserId,
               earned: 0,
               progress: 0,
               status: 'pending'
-            };
+            });
             
-            referrerData.referralHistory.push(newReferral);
             referrerData.pendingReferrals = (referrerData.pendingReferrals || 0) + 1;
             
-            // Save updated referrer data
+            // Save updated data
             localStorage.setItem(referrerDataKey, JSON.stringify(referrerData));
             
             console.log("✅ Referral added successfully!");
-            showNotification("🎉 Referral added! You'll earn $1 when they complete $15 in tasks.", "success");
+            showNotification("🎉 New referral added! You'll earn $1 when they complete $15 in tasks.", "success");
             
             // Update display if referrer is current user
-            if (currentUser && referrerData.userId === currentUser.id) {
+            if (currentUser && referrer.id === currentUser.id) {
+              userData = referrerData;
               updateDisplay();
             }
-          } else {
-            console.log("ℹ️ Referral already exists");
           }
-        } else {
-          console.log("❌ Referrer data not found");
         }
       } else {
-        console.log("❌ Referrer not found with code:", referrerCode);
-        showNotification("Invalid referral code", "warning");
+        console.log("❌ Referrer not found");
       }
     }
 
-    // ✅ FIXED: Update referral progress when referred user earns
+    // ✅ FIXED: Update referral progress
     function updateReferralProgress(referredUserId, amountEarned) {
       console.log("🔄 Updating referral progress for:", referredUserId, "Amount:", amountEarned);
       
@@ -1266,7 +1235,7 @@
       
       for (const mobile in users) {
         const user = users[mobile];
-        const userDataKey = `MTEarningData_${user.id}`;
+        const userDataKey = `userData_${user.id}`;
         const storedUserData = localStorage.getItem(userDataKey);
         
         if (storedUserData) {
@@ -1276,13 +1245,13 @@
             const referralIndex = userData.referralHistory.findIndex(ref => ref.id == referredUserId);
             
             if (referralIndex !== -1) {
-              console.log("✅ Found referral in user's history:", userData.userId);
+              console.log("✅ Found referral in:", userData.username);
               
-              // Update the referral progress
+              // Update referral progress
               userData.referralHistory[referralIndex].earned += amountEarned;
               userData.referralHistory[referralIndex].progress = Math.min(100, (userData.referralHistory[referralIndex].earned / 15) * 100);
               
-              // Check if referral is now active
+              // Check if referral becomes active
               if (userData.referralHistory[referralIndex].earned >= 15 && userData.referralHistory[referralIndex].status === 'pending') {
                 userData.referralHistory[referralIndex].status = 'active';
                 userData.pendingReferrals = Math.max(0, (userData.pendingReferrals || 0) - 1);
@@ -1290,15 +1259,15 @@
                 userData.referralEarnings = (userData.referralEarnings || 0) + 1.00;
                 userData.lifetimeEarning = (userData.lifetimeEarning || 0) + 1.00;
                 
-                console.log("🎉 Referral activated! Bonus added.");
+                console.log("🎉 Referral activated! $1 bonus added");
                 showNotification("💰 Referral bonus! $1.00 added to your balance.", "success");
               }
               
-              // Save updated user data
+              // Save updated data
               localStorage.setItem(userDataKey, JSON.stringify(userData));
               
-              // Update display if this is the current user
-              if (currentUser && userData.userId === currentUser.id) {
+              // Update display if this is current user
+              if (currentUser && user.id === currentUser.id) {
                 updateDisplay();
               }
             }
@@ -1307,31 +1276,277 @@
       }
     }
 
-    // Initialize the app when page loads
+    // Load user data
+    function loadUserData(user) {
+      const today = new Date().toLocaleDateString();
+      
+      // Try to load existing data
+      const storedUserData = localStorage.getItem(`userData_${user.id}`);
+      const storedDailyData = localStorage.getItem(`dailyData_${user.id}`);
+      
+      if (storedUserData && storedDailyData) {
+        userData = JSON.parse(storedUserData);
+        dailyData = JSON.parse(storedDailyData);
+        
+        // Reset daily data if new day
+        if (dailyData.date !== today) {
+          dailyData = { date: today, completed: 0, remaining: 100, todaysEarning: 0 };
+        }
+      } else {
+        // Initialize if not exists
+        initializeUserData(user);
+        return;
+      }
+      
+      // Show main app
+      document.getElementById('login-section').style.display = 'none';
+      document.getElementById('registration-section').style.display = 'none';
+      document.getElementById('main-app').style.display = 'block';
+      document.getElementById('loading').style.display = 'none';
+      document.getElementById('home-profile').style.display = 'block';
+      document.getElementById('home-content').style.display = 'block';
+      
+      updateDisplay();
+    }
+
+    // Update storage
+    function updateStorage() {
+      if (userData && userData.userId) {
+        localStorage.setItem(`userData_${userData.userId}`, JSON.stringify(userData));
+        localStorage.setItem(`dailyData_${userData.userId}`, JSON.stringify(dailyData));
+      }
+    }
+
+    // Update display
+    function updateDisplay() {
+      if (!userData || !dailyData) return;
+      
+      // Update basic info
+      document.getElementById("username").innerText = userData.firstName;
+      document.getElementById("user-id").innerText = userData.userId;
+      document.getElementById("completed-card").innerText = dailyData.completed;
+      document.getElementById("remaining-card").innerText = dailyData.remaining;
+      document.getElementById("todays-earning").innerText = dailyData.todaysEarning.toFixed(3);
+      document.getElementById("lifetime-earning-card").innerText = userData.lifetimeEarning.toFixed(3);
+      document.getElementById("current-balance").innerText = (userData.lifetimeEarning - userData.withdrew).toFixed(3);
+      document.getElementById("header-balance").innerText = "$" + (userData.lifetimeEarning - userData.withdrew).toFixed(3);
+      
+      // Update stats
+      document.getElementById("total-earned").innerText = "$" + (userData.lifetimeEarning - userData.withdrew).toFixed(3);
+      document.getElementById("tasks-completed").innerText = userData.totalTasks;
+      document.getElementById("lifetime-earning").innerText = "$" + userData.lifetimeEarning.toFixed(3);
+      document.getElementById("referral-earnings").innerText = "$" + (userData.referralEarnings || 0).toFixed(3);
+      
+      // Update progress
+      const progressPercent = (dailyData.completed / 100 * 100);
+      document.getElementById("progress-bar").style.width = progressPercent + "%";
+      document.getElementById("progress-percent").innerText = progressPercent.toFixed(0) + "%";
+      
+      // Update referral section
+      document.getElementById("ref-earned").innerText = (userData.referralEarnings || 0).toFixed(3);
+      document.getElementById("referral-count").innerText = userData.referrals || 0;
+      document.getElementById("ref-link").innerText = `https://task-tycoon.vercel.app/?ref=${userData.referralCode}`;
+      
+      // Update profile
+      document.getElementById("profile-username").innerText = userData.firstName;
+      document.getElementById("profile-user-id").innerText = userData.userId;
+      document.getElementById("profile-refer-count").innerText = userData.referrals || 0;
+      document.getElementById("profile-refer-earnings").innerText = (userData.referralEarnings || 0).toFixed(3);
+      document.getElementById("profile-today-earning").innerText = dailyData.todaysEarning.toFixed(3);
+      document.getElementById("profile-lifetime-earning").innerText = userData.lifetimeEarning.toFixed(3);
+      document.getElementById("join-date").innerText = userData.joinDate;
+      document.getElementById("profile-pending-refs").innerText = userData.pendingReferrals || 0;
+      document.getElementById("profile-ref-link").innerText = `https://task-tycoon.vercel.app/?ref=${userData.referralCode}`;
+      document.getElementById("profile-tasks-today").innerText = `${dailyData.completed}/100`;
+      document.getElementById("profile-tasks-completed").innerText = userData.totalTasks;
+      document.getElementById("profile-balance").innerText = (userData.lifetimeEarning - userData.withdrew).toFixed(3);
+      document.getElementById("profile-withdrew").innerText = userData.withdrew.toFixed(3);
+      
+      // Update referral history
+      updateReferralHistoryDisplay();
+      updateTaskVisualization();
+    }
+
+    // Update referral history display
+    function updateReferralHistoryDisplay() {
+      const historyList = document.getElementById("referral-history-list");
+      
+      if (!userData.referralHistory || userData.referralHistory.length === 0) {
+        historyList.innerHTML = '<div class="empty-history">No referral history yet</div>';
+        return;
+      }
+      
+      historyList.innerHTML = '';
+      
+      userData.referralHistory.forEach(referral => {
+        const progressPercentage = Math.min(100, (referral.earned / 15) * 100);
+        const progressColor = referral.status === 'active' ? '#4CAF50' : '#ff9800';
+        
+        const historyItem = document.createElement("div");
+        historyItem.className = "history-item";
+        historyItem.innerHTML = `
+          <div class="history-id">${referral.id}</div>
+          <div class="history-earned">$${referral.earned.toFixed(2)}</div>
+          <div class="history-progress">
+            <div class="progress-circle" style="background: conic-gradient(${progressColor} ${progressPercentage}%, #2c3e50 ${progressPercentage}%)">
+              <div class="progress-circle-inner">${Math.round(progressPercentage)}%</div>
+            </div>
+          </div>
+          <div class="history-status ${referral.status === 'active' ? 'status-active' : 'status-pending'}">${referral.status}</div>
+        `;
+        
+        historyList.appendChild(historyItem);
+      });
+    }
+
+    // Update task visualization
+    function updateTaskVisualization() {
+      const homeVisual = document.getElementById("task-visual");
+      homeVisual.innerHTML = "";
+      
+      for (let i = 0; i < 10; i++) {
+        const row = document.createElement("div");
+        row.style.display = "flex";
+        row.style.justifyContent = "center";
+        row.style.gap = "5px";
+        row.style.marginBottom = "5px";
+        
+        for (let j = 0; j < 10; j++) {
+          const dot = document.createElement("div");
+          dot.className = "task-dot";
+          const index = i * 10 + j;
+          
+          if (index < dailyData.completed) {
+            dot.classList.add("completed");
+          }
+          
+          row.appendChild(dot);
+        }
+        
+        homeVisual.appendChild(row);
+      }
+    }
+
+    // Task links
+    const taskLinks = [
+      "https://tomake-chai-vlona.vercel.app",
+      "https://premium-sm-offer.vercel.app",
+    ];
+
+    // Start task
+    function startTask() {
+      if (dailyData.completed >= 100) {
+        showNotification("You have completed all tasks for today!", "warning");
+        return;
+      }
+      
+      const start = Date.now();
+      const ad = window.open(taskLinks[dailyData.completed % taskLinks.length], "_blank");
+      
+      if (!ad) {
+        showNotification("Please allow popups to complete tasks", "error");
+        return;
+      }
+      
+      const check = setInterval(() => {
+        if (ad.closed) {
+          clearInterval(check);
+          const duration = (Date.now() - start) / 1000;
+          
+          if (duration >= 17) {
+            dailyData.completed++;
+            dailyData.remaining = 100 - dailyData.completed;
+            dailyData.todaysEarning += 0.015;
+            userData.lifetimeEarning += 0.015;
+            userData.totalTasks++;
+            
+            // ✅ FIXED: Update referral progress
+            updateReferralProgress(userData.userId, 0.015);
+            
+            updateStorage();
+            updateDisplay();
+            showNotification("✅ Task completed! $0.015 added to your balance.", "success");
+            
+            // Completion bonus
+            if (dailyData.completed === 100) {
+              userData.lifetimeEarning += 0.10;
+              updateStorage();
+              updateDisplay();
+              showNotification("🎉 Congratulations! You completed all tasks and earned a $0.10 bonus!", "success");
+            }
+          } else {
+            showNotification("⏱️ You must view the ad for at least 15 seconds!", "error");
+          }
+        }
+      }, 500);
+    }
+
+    // Show section
+    function showSection(section) {
+      document.getElementById("home-profile").style.display = "none";
+      document.getElementById("home-content").style.display = "none";
+      document.getElementById("profile-page").style.display = "none";
+      
+      if (section === 'home') {
+        document.getElementById("home-profile").style.display = "block";
+        document.getElementById("home-content").style.display = "block";
+      } else if (section === 'profile') {
+        document.getElementById("profile-page").style.display = "block";
+      }
+      
+      // Update nav
+      document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
+      document.getElementById("nav-" + section).classList.add('active');
+    }
+
+    // Copy referral link
+    function copyReferralLink() {
+      if (!userData) return;
+      
+      const refLink = `https://task-tycoon.vercel.app/?ref=${userData.referralCode}`;
+      navigator.clipboard.writeText(refLink)
+        .then(() => showNotification("✅ Referral link copied! You earn $1 for each successful referral.", "success"))
+        .catch(() => showNotification("Failed to copy link", "error"));
+    }
+    
+    // Share referral link
+    function shareReferralLink() {
+      if (!userData) return;
+      
+      const refLink = `https://task-tycoon.vercel.app/?ref=${userData.referralCode}`;
+      
+      if (navigator.share) {
+        navigator.share({
+          title: 'Earn with Task Tycoon Vercel App',
+          text: 'Join Task Tycoon Vercel App and start earning money!',
+          url: refLink
+        }).catch(() => copyReferralLink());
+      } else {
+        copyReferralLink();
+      }
+    }
+
+    // Initialize app
     document.addEventListener('DOMContentLoaded', function() {
-      // Check if user is already registered
+      // Check if user is logged in
       const storedCurrentUser = localStorage.getItem('currentUser');
       
       if (storedCurrentUser) {
-        // User is already registered, show main app
         currentUser = JSON.parse(storedCurrentUser);
         loadUserData(currentUser);
       } else {
-        // User is not registered, show login form
+        // Show login form
         document.getElementById('login-section').style.display = 'block';
-        document.getElementById('main-app').style.display = 'none';
         
-        // Handle login form submission
+        // Login form
         document.getElementById('login-form').addEventListener('submit', function(e) {
           e.preventDefault();
           
           const mobile = document.getElementById('mobile').value;
           const password = document.getElementById('password').value;
           
-          // Validate login
           const users = JSON.parse(localStorage.getItem('registeredUsers') || '{}');
           if (users[mobile] && users[mobile].password === password) {
-            // Login successful
             localStorage.setItem('currentUser', JSON.stringify(users[mobile]));
             currentUser = users[mobile];
             loadUserData(currentUser);
@@ -1341,7 +1556,7 @@
           }
         });
         
-        // Handle registration form submission
+        // Registration form
         document.getElementById('registration-form').addEventListener('submit', function(e) {
           e.preventDefault();
           
@@ -1351,7 +1566,6 @@
           const confirmPassword = document.getElementById('confirm-password').value;
           const referralCode = document.getElementById('referral-code').value;
           
-          // Validate form
           if (password !== confirmPassword) {
             showNotification("Passwords do not match", "error");
             return;
@@ -1362,18 +1576,15 @@
             return;
           }
           
-          // Check IP address
           const userIP = getUserIP();
           if (isIPRegistered(userIP)) {
             showNotification("Only one account per device is allowed", "error");
             return;
           }
           
-          // Generate user ID and referral code
           const userId = Math.floor(100000 + Math.random() * 900000);
           const userReferralCode = generateReferralCode();
           
-          // Create user object
           const newUser = {
             id: userId,
             name: name,
@@ -1384,11 +1595,10 @@
             ip: userIP
           };
           
-          // Register user
           registerUser(newUser);
         });
         
-        // Toggle between login and registration
+        // Toggle forms
         document.getElementById('show-register').addEventListener('click', function(e) {
           e.preventDefault();
           document.getElementById('login-section').style.display = 'none';
@@ -1409,297 +1619,17 @@
           showNotification("Referral code detected from URL!", "success");
         }
         
-        // Telegram channel button
+        // Telegram button
         document.querySelector('.btn-telegram').addEventListener('click', function() {
           window.open('https://t.me/your_channel_link', '_blank');
         });
         
-        // Video tutorial button
+        // Video button
         document.querySelector('.btn-secondary').addEventListener('click', function() {
           showNotification("Video tutorial will be available soon!", "success");
         });
       }
     });
-
-    // Load user data for registered users
-    function loadUserData(user) {
-      const userId = user.id;
-      const today = new Date().toLocaleDateString();
-      
-      // Try to load existing user data
-      const storedUserData = localStorage.getItem(`MTEarningData_${userId}`);
-      const storedDailyData = localStorage.getItem(`dailyEarningData_${userId}`);
-      
-      if (storedUserData && storedDailyData) {
-        userData = JSON.parse(storedUserData);
-        data = JSON.parse(storedDailyData);
-        
-        // Check if data is for today
-        if (data.date !== today) {
-          // Reset daily data for new day
-          data = {
-            date: today, 
-            completed: 0, 
-            remaining: 100, 
-            todaysEarning: 0
-          };
-        }
-      } else {
-        // Initialize user data if not exists (for backward compatibility)
-        initializeUserData(user);
-        return;
-      }
-      
-      // Hide loading and show content
-      document.getElementById('login-section').style.display = 'none';
-      document.getElementById('registration-section').style.display = 'none';
-      document.getElementById('main-app').style.display = 'block';
-      document.getElementById('loading').style.display = 'none';
-      document.getElementById('home-profile').style.display = 'block';
-      document.getElementById('home-content').style.display = 'block';
-      
-      // Update display
-      updateDisplay();
-    }
-
-    function updateStorage() {
-      if (userData && userData.userId) {
-        localStorage.setItem(`MTEarningData_${userData.userId}`, JSON.stringify(userData));
-        localStorage.setItem(`dailyEarningData_${userData.userId}`, JSON.stringify(data));
-      }
-    }
-
-    function updateDisplay() {
-      if (!userData || !data) return;
-      
-      // Update home screen
-      document.getElementById("username").innerText = userData.firstName || userData.username;
-      document.getElementById("user-id").innerText = userData.userId;
-      document.getElementById("completed-card").innerText = data.completed;
-      document.getElementById("remaining-card").innerText = data.remaining;
-      document.getElementById("todays-earning").innerText = data.todaysEarning.toFixed(3);
-      document.getElementById("lifetime-earning-card").innerText = userData.lifetimeEarning.toFixed(3);
-      document.getElementById("current-balance").innerText = (userData.lifetimeEarning - userData.withdrew).toFixed(3);
-      document.getElementById("header-balance").innerText = "$" + (userData.lifetimeEarning - userData.withdrew).toFixed(3);
-      
-      // Update stats grid
-      document.getElementById("total-earned").innerText = "$" + (userData.lifetimeEarning - userData.withdrew).toFixed(3);
-      document.getElementById("tasks-completed").innerText = userData.totalTasks;
-      document.getElementById("lifetime-earning").innerText = "$" + userData.lifetimeEarning.toFixed(3);
-      document.getElementById("referral-earnings").innerText = "$" + (userData.referralEarnings || 0).toFixed(3);
-      
-      // Update progress bar
-      const progressPercent = (data.completed / 100 * 100);
-      document.getElementById("progress-bar").style.width = progressPercent + "%";
-      document.getElementById("progress-percent").innerText = progressPercent.toFixed(0) + "%";
-      
-      // Update profile stats
-      document.getElementById("profile-balance").innerText = (userData.lifetimeEarning - userData.withdrew).toFixed(3);
-      document.getElementById("profile-withdrew").innerText = userData.withdrew.toFixed(3);
-      document.getElementById("profile-tasks-completed").innerText = userData.totalTasks;
-      
-      // Update referral section
-      document.getElementById("ref-earned").innerText = (userData.referralEarnings || 0).toFixed(3);
-      document.getElementById("referral-count").innerText = userData.referrals || 0;
-      document.getElementById("ref-link").innerText = `https://task-tycoon.vercel.app/?ref=${userData.referralCode}`;
-      
-      // Update profile page
-      document.getElementById("profile-username").innerText = userData.firstName || userData.username;
-      document.getElementById("profile-user-id").innerText = userData.userId;
-      document.getElementById("profile-refer-count").innerText = userData.referrals || 0;
-      document.getElementById("profile-refer-earnings").innerText = (userData.referralEarnings || 0).toFixed(3);
-      document.getElementById("profile-today-earning").innerText = data.todaysEarning.toFixed(3);
-      document.getElementById("profile-lifetime-earning").innerText = userData.lifetimeEarning.toFixed(3);
-      document.getElementById("join-date").innerText = userData.joinDate;
-      document.getElementById("profile-pending-refs").innerText = userData.pendingReferrals || 0;
-      document.getElementById("profile-ref-link").innerText = `https://task-tycoon.vercel.app/?ref=${userData.referralCode}`;
-      document.getElementById("profile-tasks-today").innerText = `${data.completed}/100`;
-      
-      // Update referral history
-      updateReferralHistoryDisplay();
-      
-      // Update task visualization
-      updateTaskVisualization();
-    }
-
-    // Update referral history display
-    function updateReferralHistoryDisplay() {
-      const historyList = document.getElementById("referral-history-list");
-      
-      if (!userData.referralHistory || userData.referralHistory.length === 0) {
-        historyList.innerHTML = '<div class="empty-history">No referral history yet</div>';
-        return;
-      }
-      
-      historyList.innerHTML = '';
-      
-      userData.referralHistory.forEach(referral => {
-        const historyItem = document.createElement("div");
-        historyItem.className = "history-item";
-        
-        const progressPercentage = Math.min(100, (referral.earned / 15) * 100);
-        const progressColor = referral.status === 'active' ? '#4CAF50' : '#ff9800';
-        
-        historyItem.innerHTML = `
-          <div class="history-id">${referral.id}</div>
-          <div class="history-earned">$${referral.earned.toFixed(2)}</div>
-          <div class="history-progress">
-            <div class="progress-circle" style="background: conic-gradient(${progressColor} ${progressPercentage}%, #2c3e50 ${progressPercentage}%)">
-              <div class="progress-circle-inner">${Math.round(progressPercentage)}%</div>
-            </div>
-          </div>
-          <div class="history-status ${referral.status === 'active' ? 'status-active' : 'status-pending'}">${referral.status}</div>
-        `;
-        
-        historyList.appendChild(historyItem);
-      });
-    }
-
-    function updateTaskVisualization() {
-      const homeVisual = document.getElementById("task-visual");
-      homeVisual.innerHTML = "";
-      
-      // Create 100 dots (10 rows of 10)
-      for (let i = 0; i < 10; i++) {
-        const row = document.createElement("div");
-        row.style.display = "flex";
-        row.style.justifyContent = "center";
-        row.style.gap = "5px";
-        row.style.marginBottom = "5px";
-        
-        for (let j = 0; j < 10; j++) {
-          const dot = document.createElement("div");
-          dot.className = "task-dot";
-          const index = i * 10 + j;
-          
-          if (index < data.completed) {
-            dot.classList.add("completed");
-          }
-          
-          row.appendChild(dot);
-        }
-        
-        homeVisual.appendChild(row);
-      }
-    }
-
-    const taskLinks = [
-      "https://tomake-chai-vlona.vercel.app",
-      "https://premium-sm-offer.vercel.app",
-    ];
-
-    function showNotification(message, type) {
-      const notification = document.getElementById("notification");
-      const messageElement = document.getElementById("notification-message");
-      
-      messageElement.textContent = message;
-      notification.className = "notification " + (type || "success");
-      notification.classList.add("show");
-      
-      setTimeout(() => {
-        notification.classList.remove("show");
-      }, 3000);
-    }
-
-    function startTask() {
-      if (data.completed >= 100) {
-        showNotification("You have completed all tasks for today!", "warning");
-        return;
-      }
-      
-      const start = Date.now();
-      const ad = window.open(taskLinks[data.completed % taskLinks.length], "_blank");
-      
-      if (!ad) {
-        showNotification("Please allow popups to complete tasks", "error");
-        return;
-      }
-      
-      const check = setInterval(() => {
-        if (ad.closed) {
-          clearInterval(check);
-          const duration = (Date.now() - start) / 1000;
-          
-          if (duration >= 17) {
-            data.completed++;
-            data.remaining = 100 - data.completed;
-            data.todaysEarning += 0.015;
-            userData.lifetimeEarning += 0.015;
-            userData.totalTasks++;
-            
-            // ✅ FIXED: Update referral progress for this user
-            updateReferralProgress(userData.userId, 0.015);
-            
-            updateStorage();
-            updateDisplay();
-            showNotification("✅ Task completed! $0.015 added to your balance.", "success");
-            
-            // Check if all tasks completed for bonus
-            if (data.completed === 100) {
-              userData.lifetimeEarning += 0.10;
-              updateStorage();
-              updateDisplay();
-              showNotification("🎉 Congratulations! You completed all tasks and earned a $0.10 bonus!", "success");
-            }
-          } else {
-            showNotification("⏱️ You must view the ad for at least 15 seconds to complete the task!", "error");
-          }
-        }
-      }, 500);
-    }
-
-    function show(section) {
-      // Hide all sections first
-      document.getElementById("home-profile").style.display = "none";
-      document.getElementById("home-content").style.display = "none";
-      document.getElementById("profile-page").style.display = "none";
-      
-      // Show appropriate section
-      if (section === 'home') {
-        document.getElementById("home-profile").style.display = "block";
-        document.getElementById("home-content").style.display = "block";
-      } else if (section === 'profile') {
-        document.getElementById("profile-page").style.display = "block";
-      }
-      
-      // Update navigation
-      document.querySelectorAll('.nav-item').forEach(item => {
-        item.classList.remove('active');
-      });
-      document.getElementById("nav-" + section).classList.add('active');
-    }
-
-    function copyReferralLink() {
-      if (!userData) return;
-      
-      const refLink = `https://task-tycoon.vercel.app/?ref=${userData.referralCode}`;
-      navigator.clipboard.writeText(refLink)
-        .then(() => showNotification("✅ Referral link copied! You earn $1 for each successful referral.", "success"))
-        .catch(() => showNotification("Failed to copy link", "error"));
-    }
-    
-    function shareReferralLink() {
-      if (!userData) return;
-      
-      const refLink = `https://task-tycoon.vercel.app/?ref=${userData.referralCode}`;
-      
-      if (navigator.share) {
-        navigator.share({
-          title: 'Earn with Task Tycoon Vercel App',
-          text: 'Join Task Tycoon Vercel App and start earning money by completing simple tasks!',
-          url: refLink
-        })
-        .catch((error) => {
-          console.error('Sharing failed:', error);
-          copyReferralLink();
-        });
-      } else {
-        copyReferralLink();
-      }
-    }
-
-    // Initialize task visualization
-    updateTaskVisualization();
   </script>
 </body>
 </html>
